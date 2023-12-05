@@ -1,31 +1,54 @@
+<!--
+  Author: Lucas Kim
+  Date: December 5, 2023
+  Description: a website meant to educate others on the implications of AI and how individuals may help reduce the negative effects of AI.
+
+  Implemented challenge features:
+    - Dropdown feature: used for the concerns about AI on the home page and for the navbar on mobile
+    - "Mouseover" effects: used when hovering over the concerns about AI on the home page prior to expanding or collapsing the sections
+    - An element that moves down as the user scrolls down a page: used for the fixed navbar
+  
+  This particular file is for the works cited page, where the sources used to create this website are listed in MLA format.
+-->
+
 <!DOCTYPE html>
 
 <html lang="en-CA">
   <head>
+    <!-- Specify the charset and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Specify the stylesheet location -->
     <link rel="stylesheet" href="style.css">
-    <title>Implications of AI</title>
+    <!-- Title -->
+    <title>Works Cited - Implications of AI</title>
   </head>
   <body>
+    <!-- Navbar -->
     <nav>
       <a class="nav-home" href="index.html">Implications of AI</a>
       <ul class="nav-items">
         <li><a href="index.html" class="nav-item">The Problem</a></li>
         <li><a href="solution.html" class="nav-item">The Solution</a></li>
+        <!-- Use the active class to darken the link to the current page -->
         <li><a href="works-cited.html" class="nav-item active">Works Cited</a></li>
       </ul>
+      <!-- Button to expand/collapse the navbar on mobile -->
       <button class="nav-hamburger-button">
         <img src="icons/hamburger.svg" width="40" height="40" class="nav-hamburger-icon">
       </button>
     </nav>
+
+    <!-- Works cited page content -->
     <main>
+      <!-- Hero section #3 - explain the purpose of the works cited page -->
       <div class="hero-section-3">
         <div class="hero-container">
           <h1>Works Cited</h1>
           <p>Looking for additional resources or want to fact-check some of the information on this website? Here are the sources that were used to create this site.</p>
         </div>
       </div>
+      <!-- List the works cited in MLA format -->
       <div class="citations-container">
         <p class="citation">Acemoglu, Daron. “Dangers of Unregulated Artificial Intelligence.” <i>CEPR</i>, 23 Nov. 2021, cepr.org/voxeu/columns/dangers-unregulated-artificial-intelligence. Accessed 4 Dec. 2023.</p>
         <p class="citation">AI for Education. “How to Use AI Responsibly EVERY Time Infographic — AI for Education.” <i>AI For Education</i>, 2023, www.aiforeducation.io/ai-resources/how-to-use-ai-responsibly-every-time. Accessed 4 Dec. 2023.</p>
@@ -47,6 +70,7 @@
         <p class="citation">Marketing Charts. “Shoppers’ Biggest Concern With AI? Their Personal Info.” <i>Marketing Charts</i>, 13 Nov. 2017, www.marketingcharts.com/customer-centric/privacy-and-security-81090. Accessed 4 Dec. 2023.</p>
         <p class="citation">Metz, Cade. “What Exactly Are the Dangers Posed by A.I.?” <i>The New York Times</i>, 7 May 2023, www.nytimes.com/2023/05/01/technology/ai-problems-danger-chatgpt.html. Accessed 4 Dec. 2023.</p>
         <p class="citation">Müller, Vincent C. “Ethics of Artificial Intelligence and Robotics.” <i>Stanford Encyclopedia of Philosophy</i>, 30 Apr. 2020, plato.stanford.edu/entries/ethics-ai. Accessed 4 Dec. 2023.</p>
+        <p class="citation">OpenAI. “GPT-4.” <i>OpenAI</i>, 14 Mar. 2023, openai.com/research/gpt-4. Accessed 5 Dec. 2023.</p>
         <p class="citation">Our World in Data. “Annual Reported Artificial Intelligence Incidents and Controversies.” <i>Our World in Data</i>, 2023, ourworldindata.org/grapher/annual-reported-ai-incidents-controversies. Accessed 4 Dec. 2023.</p>
         <p class="citation">“Real News/Fake News: Fact Checkers.” <i>Berkeley Library</i>, 27 Nov. 2023, guides.lib.berkeley.edu/c.php?g=620677&p=4333407. Accessed 4 Dec. 2023.</p>
         <p class="citation">Tai, Michael Cheng-Tek. “The Impact of Artificial Intelligence on Human Society and Bioethics.” <i>Tzu Chi Medical Journal</i>, vol. 32, no. 4, Jan. 2020, p. 339. https://doi.org/10.4103/tcmj.tcmj_71_20.</p>

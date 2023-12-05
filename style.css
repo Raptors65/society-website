@@ -1,8 +1,21 @@
+/* Author: Lucas Kim
+   Date: December 5, 2023
+   Description: a website meant to educate others on the implications of AI and how individuals may help reduce the negative effects of AI.
+
+   Implemented challenge features:
+     - Dropdown feature: used for the concerns about AI on the home page and for the navbar on mobile
+     - "Mouseover" effects: used when hovering over the concerns about AI on the home page prior to expanding or collapsing the sections
+     - An element that moves down as the user scrolls down a page: used for the fixed navbar
+  
+   This particular file is for the CSS styles of the website. */
+
+/* Load custom font (Inter) from the file */
 @font-face {
   font-family: Inter;
   src: url('Inter.ttf');
 }
 
+/* Specify colour scheme using variables for easy customizability */
 :root {
   --color-1: #31393C; /* Gunmetal */
   --color-2: #0046B8; /* Cobalt blue */
@@ -11,11 +24,13 @@
   --color-5: #F79824; /* Carrot orange */
 }
 
+/* Use the custom font for the entire website */
 body {
   font-family: Inter;
   margin: 0;
 }
 
+/* Navbar styles */
 nav {
   display: flex;
   background-color: var(--color-1);
@@ -23,16 +38,18 @@ nav {
   padding: 20px;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: fixed; /* Challenge feature: fix navbar to the top of the screen */
   width: 100vw;
 }
 
+/* Navbar title styles: make the text bigger and remove default link styling */
 .nav-home {
   font-size: 20px;
   color: white;
   text-decoration: none;
 }
 
+/* Navbar item styles: remove default list styling and hide them by default (on mobile) */
 .nav-items {
   display: none;
   list-style: none;
@@ -49,6 +66,7 @@ nav {
   width: 100%;
 }
 
+/* Navbar hamburger button styles: place hamburger button at the top right and remove default button styles */
 .nav-hamburger-button {
   background: none;
   border: none;
@@ -59,15 +77,18 @@ nav {
   right: 40px;
 }
 
+/* Remove default link styling for nav items */
 .nav-item {
   color: #FFFFFF;
   text-decoration: none;
 }
 
+/* Darken the current page in the navbar */
 .active {
   color: #CCCCCC;
 }
 
+/* Hero section styles: vibrant background colour and centered+bigger text for emphasis */
 .hero-section {
   background-color: var(--color-2);
   color: white;
@@ -78,6 +99,7 @@ nav {
   margin-bottom: 20px;
 }
 
+/* Hero section 2 (solution) styles: different background colour */
 .hero-section-2 {
   background-color: var(--color-4);
   text-align: center;
@@ -87,6 +109,7 @@ nav {
   margin-bottom: 20px;
 }
 
+/* Hero section 3 (works cited) styles: different background colour */
 .hero-section-3 {
   background-color: var(--color-5);
   text-align: center;
@@ -96,24 +119,28 @@ nav {
   margin-bottom: 20px;
 }
 
+/* Set a maximum width for the hero section text to make it easier to read */
 .hero-container {
   max-width: 800px;
   margin: auto;
   padding: 0 20px;
 }
 
+/* Set a maximum width and padding for section text to make it easier to read */
 section {
   padding: 0 50px 20px;
   max-width: 1200px;
   margin: auto;
 }
 
+/* Use grid for section-1 so that the image and text can be displayed side by side (here, only 1 column is specified because this is for mobile; the desktop styles are further down) */
 .section-1 {
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 50px;
 }
 
+/* section-2 is for the emphasized section explaining why we're worrying about AI now on the home page; it has a vibrant colour, a border, and a more narrow width for emphasis */
 .section-2 {
   text-align: center;
   max-width: 700px;
@@ -123,56 +150,80 @@ section {
   border: 1px solid black;
 }
 
+/* Concern title/button styles: darken the background slightly and use a pointer cursor to indicate that it can be clicked */
 .concern-title {
   background-color: #DDDDDD;
   padding: 10px;
   cursor: pointer;
 }
 
+/* Slightly darken the concern title/button on hover (for challenge feature) */
 .concern-title:hover {
   background-color: #E2E2E2;
 }
 
+/* Concern toggle icon (+ or -) styles */
 .concern-toggle {
   padding: 5px;
   margin: 0 20px;
   font-size: 20px;
 }
 
+/* Concern description styles: hide by default and make it slightly darker than the white background */
 .concern-description {
   background-color: #EEEEEE;
   display: none;
   padding: 10px 10px;
 }
 
+/* Remove the margin from the heading of each AI concern and change it to inline-block so that the +/- icon can be displayed beside it */
 .concern-heading {
   margin: 0;
   display: inline-block;
 }
 
+/* Reduce the size of caption text under a concern and lighten the colour */
+.concern-caption {
+  font-size: 14px;
+  color: #333333;
+  text-align: center;
+}
+
+/* Reduce the size of caption text in a section and lighten the colour */
 .section-caption {
   font-size: 14px;
   color: #333333;
 }
 
+/* Hero subtitle styles */
 .hero-subtitle {
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 30px;
 }
 
+/* Adjust h1 margin in hero sections */
 h1 {
   margin-bottom: 10px;
 }
 
+/* Set overflow-x to auto so that the user can scroll the image horizontally on smaller screens (better than tiny images or making the entire page have a horizontal scroll bar) */
 .image-container {
   overflow-x: auto;
 }
 
+/* Used to center the image-container */
+.center-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Used to hide an element on larger screens */
 .large-screen {
   display: none;
 }
 
+/* Styles for the MLA citiations: 0.5 in hanging indent and remove the space (i.e., margin/padding) between paragraphs */
 .citation {
   padding-left: 0.5in;
   text-indent: -0.5in;
@@ -180,6 +231,7 @@ h1 {
   padding: 0;
 }
 
+/* Double space MLA citations, change the font to serif, and set a maximum width to make it easier to read */
 .citations-container {
   max-width: 800px;
   margin: auto;
@@ -187,11 +239,20 @@ h1 {
   font-family: serif;
 }
 
+/* Used to center YouTube embed */
+.embed-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Styles for larger screens */
 @media (min-width: 800px) {
+  /* Place nav items on the left of the navbar */
   nav {
     justify-content: start;
   }
 
+  /* Display nav items */
   .nav-items {
     flex-direction: row;
     display: flex;
@@ -201,22 +262,22 @@ h1 {
     padding-left: 50px;
   }
 
+  /* Hide hamburger button */
   .nav-hamburger-button {
     display: none;
   }
 
+  /* Add a 2nd column to section-1 (since only 1 column is displayed on mobile) */
   .section-1 {
     grid-template-columns: auto auto;
   }
 
-  .section-2 {
-    grid-template-columns: 300px auto;
-  }
-
+  /* Used to hide certain items on large screens */
   .small-screen {
     display: none;
   }
 
+  /* Used to display certain items only on large screens */
   .large-screen {
     display: inline;
   }

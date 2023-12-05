@@ -1,31 +1,55 @@
+<!--
+  Author: Lucas Kim
+  Date: December 5, 2023
+  Description: a website meant to educate others on the implications of AI and how individuals may help reduce the negative effects of AI.
+
+  Implemented challenge features:
+    - Dropdown feature: used for the concerns about AI on the home page and for the navbar on mobile
+    - "Mouseover" effects: used when hovering over the concerns about AI on the home page prior to expanding or collapsing the sections
+    - An element that moves down as the user scrolls down a page: used for the fixed navbar
+  
+  This particular file is for the solutions page, where potential ways to reduce the negative effects of AI are explained.
+-->
+
 <!DOCTYPE html>
 
 <html lang="en-CA">
   <head>
+    <!-- Specify the charset and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Specify the stylesheet location -->
     <link rel="stylesheet" href="style.css">
-    <title>Implications of AI</title>
+    <!-- Title -->
+    <title>The Solution - Implications of AI</title>
   </head>
   <body>
+    <!-- Navbar -->
     <nav>
       <a class="nav-home" href="index.html">Implications of AI</a>
       <ul class="nav-items">
         <li><a href="index.html" class="nav-item">The Problem</a></li>
+        <!-- Use the active class to darken the link to the current page -->
         <li><a href="solution.html" class="nav-item active">The Solution</a></li>
         <li><a href="works-cited.html" class="nav-item">Works Cited</a></li>
       </ul>
+      <!-- Button to expand/collapse the navbar on mobile -->
       <button class="nav-hamburger-button">
         <img src="icons/hamburger.svg" width="40" height="40" class="nav-hamburger-icon">
       </button>
     </nav>
+
+    <!-- Solutions page content -->
     <main>
+      <!-- Hero section #2 - introduce the topic of this page (ways for individuals to help reduce the negative effects of AI) -->
       <div class="hero-section-2">
         <div class="hero-container">
           <h1>How to Help Mitigate the Negative Effects of AI</h1>
           <p>The issues presented by the development of AI are frightening. What can you, and society in general, do to help ensure that AI is used to benefit the world rather than harm it?</p>
         </div>
       </div>
+
+      <!-- Solution #1 - stay informed -->
       <section class="section-1">
         <div class="section-content">
           <h2>Stay Informed</h2>
@@ -34,6 +58,7 @@
             <li>Learn the basics about how AI works. Don't worry - you don't need to be a genius to understand the basics of artificial intelligence. HubSpot has a <a href="https://blog.hubspot.com/marketing/how-does-ai-work" target="_blank">blog post</a> about the basics of AI and there are numerous free resources from <a href="https://www.coursera.org/learn/introduction-to-ai" target="_blank">Coursera</a>, <a href="https://mitsloan.mit.edu/ideas-made-to-matter/machine-learning-explained" target="_blank">MIT</a>, <a href="https://www.datacamp.com/blog/what-is-ai-quick-start-guide-for-beginners" target="_blank">DataCamp</a>, and other websites to learn about AI. If you find that you enjoy working with AI, you may even choose to pursue a career in it; the best way to avoid being affected by job loss caused by AI is to learn how to work with AI.</li>
             <li>Get your news from credible news websites when possible. When in doubt, use fact-check websites such as <a href="https://www.snopes.com/" target="_blank">Snopes</a> and <a href="https://www.factcheck.org/" target="_blank">FactCheck.org</a>. Keep in mind that social media algorithms (which are powered by AI) are likely to show you content that supports your beliefs, so fact checking is particularly important when you see something on social media.</li>
           </ul>
+          <!-- The spans are used to update the text based on whether the user is on mobile, as this affects whether the infographic is beside or below the text -->
           <p>The infographic <span class="large-screen">to the right</span><span class="small-screen">below</span> has a nice summary of things you can do to spot fake news.</p>
         </div>
         <div class="section-image">
@@ -41,6 +66,8 @@
           <div class="section-caption">Source: <a href="https://fordham.libguides.com/FakeNews/Evaluation" target="_blank">Fordham University Libraries</a></div>
         </div>
       </section>
+
+      <!-- Solution #2 - use AI responsibly -->
       <section class="section-1">
         <div class="section-image">
           <img src="photos/ai-responsible-use.png" width="400" />
@@ -50,12 +77,14 @@
           <h2>Use AI Responsibly</h2>
           <p>Artificial intelligence can be helpful but it can also be harmful. Make sure you consider the consequences of your actions when using AI.</p>
           <ul>
-            <li>Don't use generative AI in environments where it isn't permitted. This includes most academic institutions.</li>
+            <li>Don't use generative AI in environments where it isn't permitted. This includes most classes in most academic institutions.</li>
             <li>Be careful of misinformation when using artificial intelligence. Don't assume that all information provided by AI (whether it's through social media feeds or through ChatGPT) is truth and definitely don't use it to share misleading images and videos.</li>
           </ul>
           <p>The "EVERY" acronym can be used to ensure that you use AI responsibly. See the infographic shown <span class="large-screen">on the left</span><span class="small-screen">below</span>.</p>
         </div>
       </section>
+
+      <!-- Solution #3 - encourage the regulation of AI -->
       <section class="section-1">
         <div class="section-content">
           <h2>AI Regulation</h2>
@@ -67,19 +96,22 @@
             <li>"Limited risk" AI systems will need to inform the user that they're interacting with AI and comply with transparency requirements that help users make informed decisions.</li>
           </ul>
           <p>The image shown <span class="large-screen">on the right</span><span class="small-screen">below</span> has a summary of the levels of risk in the EU's AI act.</p>
-          <p>Regulations like these can help ensure that AI is used and developed responsibly.</p>
+          <p>Regulations like these can help ensure that AI is used and developed responsibly. While the responsibility for this primarily falls on governments and corporations, individuals can help out by advocating for ethical AI use and supporting legislation that promotes transparency and responsibility in AI use.</p>
         </div>
         <div class="section-image">
           <img src="photos/eu-ai-act.png" width="400" />
           <div class="section-caption">Source: <a href="https://www.thinkers360.com/tl/blog/members/an-introduction-to-risk-levels-in-the-e-u-ai-act" target="_blank">Thinkers360</a></div>
         </div>
       </section>
+
+      <!-- Link to the works cited page -->
       <section>
         <h2>Additional Resources</h2>
-        <p>Want to learn more? Check out the <a href="works-cited.html">works cited page</a> for more resources.</p>
+        <p>Want to learn more? Check out the <a href="works-cited.html">works cited page</a> for the resources used to create this website.</p>
       </section>
     </main>
 
+    <!-- Specify location of JavaScript code -->
     <script src="script.js"></script>
   </body>
 </html>
