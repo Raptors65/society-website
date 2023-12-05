@@ -63,7 +63,7 @@ nav {
   top: 50px;
   left: 0;
   background-color: var(--color-1);
-  width: 100%;
+  width: calc(100% - 40px);
 }
 
 /* Navbar hamburger button styles: place hamburger button at the top right and remove default button styles */
@@ -195,6 +195,11 @@ section {
   color: #333333;
 }
 
+/* Add horizontal scrollbar when screen is too small */
+.section-image {
+  overflow-x: auto;
+}
+
 /* Hero subtitle styles */
 .hero-subtitle {
   font-weight: bold;
@@ -229,6 +234,7 @@ h1 {
   text-indent: -0.5in;
   margin: 0;
   padding: 0;
+  overflow-wrap: break-word;
 }
 
 /* Double space MLA citations, change the font to serif, and set a maximum width to make it easier to read */
@@ -237,6 +243,7 @@ h1 {
   margin: auto;
   line-height: 2;
   font-family: serif;
+  padding: 0.75in;
 }
 
 /* Used to center YouTube embed */
@@ -280,5 +287,10 @@ h1 {
   /* Used to display certain items only on large screens */
   .large-screen {
     display: inline;
+  }
+
+  /* Remove horizontal scrollbar on larger screens */
+  .section-image {
+    overflow-x: visible;
   }
 }
